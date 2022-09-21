@@ -48,8 +48,8 @@ class OpenFlutterProductReviewItem extends StatelessWidget {
     return Container(
       width: double.infinity,
       child: Stack(
+        clipBehavior: Clip.none,
         fit: StackFit.loose,
-        overflow: Overflow.visible,
         children: <Widget>[
           Padding(
             padding: EdgeInsets.only(

@@ -326,7 +326,7 @@ class _SettingsViewState extends State<SettingsView> {
             ),
           ),
           actions: <Widget>[
-            FlatButton(
+            TextButton(
               child: Text('Ok'),
               onPressed: () {
                 Navigator.of(context).pop();

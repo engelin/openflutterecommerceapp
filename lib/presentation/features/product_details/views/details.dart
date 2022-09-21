@@ -231,7 +231,7 @@ class _ProductDetailsViewState extends State<ProductDetailsView> {
   Widget selectionOutlineButton(var deviceWidth, ProductAttribute attribute,
       String alreadySelectedValue) {
     //select size and select color widget
-    return OutlineButton(
+    return OutlinedButton(
       onPressed: () => _showSelectAttributeBottomSheet(context, attribute,
           selectedValue: alreadySelectedValue),
       child: Container(
@@ -251,13 +251,15 @@ class _ProductDetailsViewState extends State<ProductDetailsView> {
         ),
         width: deviceWidth * 0.29,
       ),
-      borderSide: BorderSide(color: AppColors.darkGray),
-      highlightedBorderColor: AppColors.red,
-      focusColor: AppColors.white,
-      highlightColor: Colors.white,
-      hoverColor: AppColors.red,
-      shape:
-          ContinuousRectangleBorder(borderRadius: BorderRadius.circular(15.0)),
+      style: OutlinedButton.styleFrom(
+        side: BorderSide(color: AppColors.darkGray),
+        // highlightedBorderColor: AppColors.red,
+        // focusColor: AppColors.white,
+        // highlightColor: Colors.white,
+        // hoverColor: AppColors.red,
+        shape:
+        ContinuousRectangleBorder(borderRadius: BorderRadius.circular(15.0)),
+      ),
     );
   }
 

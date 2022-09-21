@@ -118,15 +118,17 @@ class OpenFlutterOrderTile extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
-                    RaisedButton(
-                      padding: EdgeInsets.only(left: 24, right: 24, top: 10, bottom: 10),
-                      color: AppColors.white,
+                    ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        padding: EdgeInsets.only(left: 24, right: 24, top: 10, bottom: 10),
+                        // color: AppColors.white,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(AppSizes.imageRadius),
+                            side: BorderSide(color: AppColors.black, width: 2)),
+                      ),
                       onPressed: () {
                         onClick(order.id);
                       },
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(AppSizes.imageRadius),
-                          side: BorderSide(color: AppColors.black, width: 2)),
                       child: Text(
                         'Details',
                         style: _theme.textTheme.headline4,
